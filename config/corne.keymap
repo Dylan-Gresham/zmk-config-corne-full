@@ -31,17 +31,18 @@
                 };
                 lower_layer {
 // -----------------------------------------------------------------------------------------
-// |  TAB |  1  |  2  |  3  |  4  |  5  |   |  6  |  7  |  8  |  9  |  0  | BKSP |
-// | BTCLR| BT1 | BT2 | BT3 | BT4 | BT5 |   | LFT | DWN |  UP | RGT |     |      |
-// | SHFT |     |     |     |     |     |   |     |     |     |     |     |      |
-//                    | GUI | RSE | SPC |   | ENT | DEF | ALT |
+// |  TAB |  1  |  2  |  3  | UDO | RDO |   |  BT1 | BT2 | BT3 | BT4 | BT5  | BKSP |
+// | BTCLR| 4  |  5  |  6  | CUT |    |   | LFT | DWN |  UP | RGT |     |      |
+// | SHFT | 7   | 8   | 9   | CPY | PST |   |     |     |     |     |     |      |
+//                    | 0 | RSE | SPC |   | ENT | DEF | ALT |
                         bindings = <
-   &kp TAB    &kp N1       &kp N2       &kp N3       &kp N4       &kp N5         &kp N6   &kp N7   &kp N8 &kp N9    &kp N0 &kp BSPC
-   &bt BT_CLR &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_SEL 3 &bt BT_SEL 4   &kp LEFT &kp DOWN &kp UP &kp RIGHT &trans &trans
-   &kp LSHFT  &trans       &trans       &trans       &trans       &trans         &trans   &trans   &trans &trans    &trans &trans
-                                    &kp LGUI     &to RAISE      &kp SPACE      &kp RET  &to DEFAULT   &kp RALT
+   &kp TAB    &kp N1       &kp N2       &kp N3       &kp K_UNDO       &kp K_REDO      &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_SEL 3 &bt BT_SEL 4    &kp BSPC
+   &bt BT_CLR  &kp N4   &kp N5   &kp N6 &kp K_CUT    &trans  &kp LEFT &kp DOWN &kp UP &kp RIGHT &trans &trans
+   &kp LSHFT  &kp N7       &kp N8       &kp N9       &kp K_COPY       &kp K_PASTE         &trans   &trans   &trans &trans    &trans &trans
+                                    &kp N0     &to RAISE      &kp SPACE      &kp RET  &to DEFAULT   &kp RALT
                         >;
                 };
+
 
                 raise_layer {
 // -----------------------------------------------------------------------------------------
